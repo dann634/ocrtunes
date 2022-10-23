@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ocrtune.NewPlaylistController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="63.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#savePlaylist" text="Save Playlist" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
+            <Button mnemonicParsing="false" onAction="#generatePlaylistWindow" text="Generate Playlist" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <Label alignment="CENTER" prefHeight="55.0" prefWidth="598.0" text="Create New Playlist" textFill="#0baa35" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="481.0" prefWidth="1207.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="vboxMain" alignment="TOP_CENTER" prefHeight="395.0" prefWidth="1170.0">
+               <children>
+                  <GridPane fx:id="gridPane" prefHeight="113.0" prefWidth="1195.0" vgap="5.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.6666259765625" minWidth="10.0" prefWidth="308.6666259765625" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.33329264322913" minWidth="10.0" prefWidth="283.3333740234375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="358.66662597656244" minWidth="10.0" prefWidth="196.33335367838538" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="382.66668701171875" minWidth="10.0" prefWidth="277.33333333333326" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.6666259765625" minWidth="10.0" prefWidth="98.66668701171875" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints fillHeight="false" maxHeight="60.66666666666667" minHeight="50.0" prefHeight="45.99999491373698" vgrow="NEVER" />
+                      <RowConstraints maxHeight="51.99999523162842" minHeight="0.0" prefHeight="14.666671752929688" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="143.0" text="Song Name">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="Artist" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="Duration" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="Genre" GridPane.columnIndex="3">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
